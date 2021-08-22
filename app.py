@@ -9,8 +9,9 @@ st.set_option("deprecation.showfileUploaderEncoding", False)
 
 #Set the directory path
 
-banner_path= 'D:/heroku_deployment/yolov4-deepSort/images/od.jpg'
-img_path='D:/heroku_deployment/yolov4-deepSort/images/detection1.png'
+banner_path= './images/od.jpg'
+img_path='./images/detection1.png'
+video_path='./data/results.mp4'
 
 
 def about():
@@ -123,7 +124,7 @@ View Dev-k web :point_right: http://dev-k-copyright.herokuapp.com/
                 st.write('**Tracking objects in an Image**')
                 st.image(img,use_column_width=True)
                 st.write('**Demo-Deep sort** check out the below vedio.')
-                video_file = open('D:/heroku_deployment/yolov4-deepSort/results.mp4', 'rb')
+                video_file = open(video_path, 'rb')
                 video_bytes = video_file.read()
 
                 st.video(video_bytes)
